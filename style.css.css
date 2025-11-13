@@ -1,0 +1,210 @@
+/* ===== Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #fdfbff, #f0f8ff);
+    color: #333;
+}
+
+/* ===== HEADER LAYOUT ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(90deg, #ffb6c1, #87cefa);
+    color: #fff;
+    padding: 15px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #fff;
+    flex-wrap: wrap;
+}
+
+/* 🔹 Profile photo (left-hand side, circular) */
+.header-left {
+    flex: 0 0 auto;
+    margin-right: 25px;
+}
+
+.image-box {
+    width: 140px;
+    height: 140px;
+    border: 4px solid #fff;
+    border-radius: 50%; /* 🔸 Makes the profile circular */
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* 🔹 Text section (center-right) */
+.header-center {
+    flex: 1;
+    text-align: center;
+}
+
+.header-center h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin: 0;
+    color: #fff;
+}
+
+.header-center p {
+    margin: 6px 0 10px;
+    font-size: 15px;
+}
+
+/* 🔹 Navigation now below the registration info */
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.15);
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.header-nav a:hover {
+    background-color: rgba(255,255,255,0.3);
+    transform: translateY(-3px);
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 1100px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Containers */
+.education-container, .career-container, .hobbies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Cards */
+.education-item, .career-item, .hobby-item {
+    flex: 1 1 calc(30% - 25px);
+    background-color: #f5f5f5;
+    border: 2px solid transparent;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.career-item {
+    flex: 1 1 calc(45% - 25px);
+}
+
+/* Hover effect for cards */
+.education-item:hover, .career-item:hover, .hobby-item:hover {
+    background-color: #fff0f5;
+    border-color: #87cefa;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Titles */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+/* ===== HOBBY IMAGES ===== */
+.hobby-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.hobby-item h3 {
+    font-size: 16px;
+    color: #023e8a;
+    margin: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ffb6c1, #87cefa);
+    color: white;
+    font-size: 16px;
+    border-top: 4px solid #fff;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== LINKS ===== */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #ff69b4;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left {
+        margin: 0 0 10px 0;
+    }
+
+    .header-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .image-box {
+        width: 110px;
+        height: 110px;
+    }
+
+    .hobby-item img {
+        width: 100px;
+        height: 100px;
+    }
+}
